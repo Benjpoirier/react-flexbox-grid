@@ -181,6 +181,72 @@ const Home = () => (
           <Markdown html = {distBetweenMD} />
         </Row>
       </Section>
+      <Section title="Hidden" description ="use hidden class to hide" >
+        <Row>
+          <Box xs={12} type="container">
+            <Row>
+              <Box type="nested" xs={0} sm={3} />
+              <Box type="nested" xs={3} />
+            </Row>
+            <Row>
+              <Box type="nested" sm={0} xs={3} />
+              <Box type="nested" xs={3} />
+            </Row>
+            <Row>
+              <Box type="nested" md={0} xs={3} />
+              <Box type="nested" xs={3} />
+            </Row>
+            <Row>
+              <Box type="nested" lg={0} xs={3} />
+              <Box type="nested" xs={3} />
+            </Row>
+          </Box>
+        </Row>
+      </Section>
+      <Section title="Hidden-down" description ="use hidden class to hide down" >
+        <Row>
+          <Box xs={12} type="container">
+            <Row>
+              <Box type="nested" xsHiddenDown sm={3} />
+              <Box type="nested" xs={3} />
+            </Row>
+            <Row>
+              <Box type="nested" smHiddenDown xs={3} />
+              <Box type="nested" xs={3} />
+            </Row>
+            <Row>
+              <Box type="nested" mdHiddenDown xs={3} />
+              <Box type="nested" xs={3} />
+            </Row>
+            <Row>
+              <Box type="nested" lgHiddenDown xs={3} />
+              <Box type="nested" xs={3} />
+            </Row>
+          </Box>
+        </Row>
+      </Section>
+            <Section title="Hidden-up" description ="use hidden class to hide down" >
+        <Row>
+          <Box xs={12} type="container">
+            <Row>
+              <Box type="nested" xsHiddenUp sm={3} />
+              <Box type="nested" xs={3} />
+            </Row>
+            <Row>
+              <Box type="nested" smHiddenUp xs={3} />
+              <Box type="nested" xs={3} />
+            </Row>
+            <Row>
+              <Box type="nested" mdHiddenUp xs={3} />
+              <Box type="nested" xs={3} />
+            </Row>
+            <Row>
+              <Box type="nested" lgHiddenUp xs={3} />
+              <Box type="nested" xs={3} />
+            </Row>
+          </Box>
+        </Row>
+      </Section>
     </Grid>
   </article>
 );

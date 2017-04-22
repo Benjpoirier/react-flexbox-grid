@@ -1,19 +1,19 @@
 {
   "name": "react-flexbox-grid",
   "description": "A set of React components implementing flexboxgrid with the power of CSS Modules",
-  "homepage": "https://github.com/roylee0704/react-flexbox-grid",
+  "homepage": "https://github.com/mistertemp/react-flexbox-grid",
   "version": "1.0.2",
   "main": "lib/index.js",
   "author": {
-    "email": "roylee0704@gmail.com",
-    "name": "Roy Lee"
+    "email": "dev@mistertemp.com",
+    "name": "mistertemp"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/roylee0704/react-flexbox-grid.git"
+    "url": "git://github.com/mistertemp/react-flexbox-grid.git"
   },
   "bugs": {
-    "url": "https://github.com/roylee0704/react-flexbox-grid/issues"
+    "url": "https://github.com/mistertemp/react-flexbox-grid/issues"
   },
   "keywords": [
     "css modules",
@@ -23,7 +23,7 @@
     "react-component"
   ],
   "dependencies": {
-    "flexboxgrid": "^6.3.0"
+    "flexboxgrid": "mistertemp/flexboxgrid"
   },
   "devDependencies": {
     "@types/react": "*",
