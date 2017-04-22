@@ -12,6 +12,10 @@ const propTypes = {
   smOffset: PropTypes.number,
   mdOffset: PropTypes.number,
   lgOffset: PropTypes.number,
+  xsHiddenDown: PropTypes.bool,
+  smHiddenDown: PropTypes.bool,
+  mdHiddenDown: PropTypes.bool,
+  lgHiddenDown: PropTypes.bool,
   first: ViewportSizeType,
   last: ViewportSizeType,
   className: PropTypes.string,
@@ -27,11 +31,20 @@ const classMap = {
   xsOffset: 'col-xs-offset',
   smOffset: 'col-sm-offset',
   mdOffset: 'col-md-offset',
-  lgOffset: 'col-lg-offset'
+  lgOffset: 'col-lg-offset',
+  xsHiddenDown: 'col-xs-hidden',
+  smHiddenDown: 'col-sm-hidden-down',
+  mdHiddenDown: 'col-md-hidden-down',
+  lgHiddenDown: 'col-lg-hidden-down',
+  xsHiddenUp: 'col-lg-hidden-down',
+  smHiddenUp: 'col-sm-hidden-up',
+  mdHiddenUp: 'col-md-hidden-up',
+  lgHiddenUp: 'col-lg-hidden-up',
 };
 
-function isInteger(value) {
-  return typeof value === 'number' && isFinite(value) && Math.floor(value) === value;
+function isValid(value) {
+  return (typeof value === 'number' && isFinite(value) && Math.floor(value) === value)
+    || value === 'hidden';
 }
 
 function getColClassNames(props) {
@@ -51,7 +64,11 @@ function getColClassNames(props) {
 
   return Object.keys(props)
     .filter(key => classMap[key])
-    .map(key => getClass(isInteger(props[key]) ? (classMap[key] + '-' + props[key]) : classMap[key]))
+    .map(key => getClass(
+      isValid(props[key]) ?
+      (classMap[key] + '-' + (props[key] === 0 ? 'hidden' : props[key] ))
+      : classMap[key])
+    )
     .concat(extraClasses);
 }
 
